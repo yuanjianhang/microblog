@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/common.css' />
+	<link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+	<link rel='stylesheet' href='/stylesheets/bootstrap-responsive.css' />
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="###" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a href="/" class="brand">Microblog</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="/">首页</a></li>
+						<li><a href="/login">登录</a></li>
+						<li><a href="/reg">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="container" class="container">
+		<form method="post" class="form-horizontal">
+			<fieldset>
+				<legend>用户注册</legend>
+				<div class="control-group">
+					<label for="username" class="control-label">用户名</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="username" name="username">
+						<p class="help-block">您的账户名称</p>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="password" class="control-label">口令</label>
+					<div class="controls">
+						<input type="password" class="input-xlarge" id="password" name="password">
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="password-repeat" class="control-label">重复输入口令</label>
+					<div class="controls">
+						<input type="password" class="input-xlarge" id="password-repeat" name="password-repeat">
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary">注册</button>
+				</div>
+			</fieldset>
+		</form>
+		<footer>
+			<p><a href="http://weibo.com/yuanjianhang" target="_blank">原健航的博客</a> 2013</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+</body>
+</html>

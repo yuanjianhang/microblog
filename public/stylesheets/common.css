@@ -1,0 +1,59 @@
+/* 设置默认字体 */
+body, button, input, select, textarea {
+     font: 12px/1.4 tahoma, arial, "\5b8b\4f53", sans-serif;
+     color:#333;
+}
+/* 清楚默认距离 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin: 0;
+	padding: 0;
+}
+
+button, input, select, textarea {	/* 使得表单元素在 ie 下能继承字体大小 */
+	font-size: 100%;
+	outline: none;
+}
+textarea {
+	resize: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color:#999;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+sup {vertical-align: text-top;} /* 重置，减少对行高的影响 */
+sub {vertical-align: text-bottom;}
+
+/* 公共样式 */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix{
+	*zoom:1;
+}
+.clear {
+	clear: both;
+	line-height:0;
+}
