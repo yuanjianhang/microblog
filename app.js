@@ -34,8 +34,31 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+app.dynamicHelpers({
+    user: function(req, res) {
+        return req.session.user;
+    },
+    error: function(req, res) {
+        var err = req.flash("error");
+        if ( err.length ) {
+            return err;
+        } else {
+            return null;
+        }
+    },
+    success: function(req, res) {
+        var succ = req.flash("success");
+        if ( succ.length ) {
+            return succ;
+        } else {
+            return null;
+        }
+    }
+});
+
 app.get("/", routes.index);
 app.get("/reg", routes.reg);
+app.post("/reg", routes.postReg);
 
 app.configure('development', function(){
   app.use(express.errorHandler());
