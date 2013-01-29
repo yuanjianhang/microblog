@@ -34,16 +34,8 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.get("/", function(req, res) {
-  res.render("index", {
-    title: "首页"
-  });
-});
-app.get("/reg", function(req, res) {
-  res.render("reg", {
-    title: "用户注册"
-  });
-});
+app.get("/", routes.index);
+app.get("/reg", routes.reg);
 
 app.configure('development', function(){
   app.use(express.errorHandler());
