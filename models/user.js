@@ -28,7 +28,7 @@ User.prototype.save = function(callback) {
 		});
 	});
 }
-User.get = function(usrname, callback) {
+User.get = function(username, callback) {
 	mongodb.open(function(err, db) {
 		if ( err ) {
 			return callback(err);

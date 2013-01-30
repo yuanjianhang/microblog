@@ -33,7 +33,7 @@ app.configure(function(){
   
   app.use(express.static(path.join(__dirname, 'public')));
 });
-
+/*
 app.dynamicHelpers({
     user: function(req, res) {
         return req.session.user;
@@ -55,7 +55,7 @@ app.dynamicHelpers({
         }
     }
 });
-
+*/
 app.get("/", routes.index);
 app.get("/reg", routes.reg);
 app.post("/reg", routes.postReg);
