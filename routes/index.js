@@ -7,13 +7,13 @@ module.exports = {
 	index: function(req, res) {
 		console.log(res.locals.success);
 		console.log(res.locals.error);
-		var data = {
+		console.log("here");
+		res.render("index", {
 			title: "首页",
 			user: req.session.user || null,
 			success: res.locals.success || "",
 			error: res.locals.error || ""
-		};
-		res.render("index", data);
+		});
 	},
 	reg: function(req, res) {
 		res.render("reg", {
@@ -53,6 +53,8 @@ module.exports = {
 				req.session.user = newUser;
 				res.locals.user = newUser;
 				res.locals.success = "注册成功";
+				console.log(res.locals.success);
+				console.log("there");
 				res.redirect("/");
 			});
 		});
